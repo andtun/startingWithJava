@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1c69870-8009-4d55-a32f-1f9f3c4f3c55" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/input.java" afterPath="$PROJECT_DIR$/src/input.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/run.java" afterPath="$PROJECT_DIR$/src/run.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/search.java" afterPath="$PROJECT_DIR$/src/search.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,7 +24,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="run.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="run.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/run.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="175">
@@ -35,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="search.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/search.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="33" column="61" lean-forward="false" selection-start-line="33" selection-start-column="61" selection-end-line="33" selection-end-column="61" />
+            <state relative-caret-position="307">
+              <caret line="32" column="62" lean-forward="false" selection-start-line="32" selection-start-column="62" selection-end-line="32" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -91,11 +90,11 @@
         <option value="$PROJECT_DIR$/src/struct.java" />
         <option value="$PROJECT_DIR$/src/bubble.java" />
         <option value="$PROJECT_DIR$/src/quicksort.java" />
-        <option value="$PROJECT_DIR$/src/search.java" />
         <option value="$PROJECT_DIR$/src/sort.java" />
         <option value="$PROJECT_DIR$/src/arrayTools.java" />
         <option value="$PROJECT_DIR$/src/input.java" />
         <option value="$PROJECT_DIR$/src/run.java" />
+        <option value="$PROJECT_DIR$/src/search.java" />
       </list>
     </option>
   </component>
@@ -696,14 +695,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/struct.java" />
-    <entry file="file://$PROJECT_DIR$/src/search.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="33" column="61" lean-forward="false" selection-start-line="33" selection-start-column="61" selection-end-line="33" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sort.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1557">
@@ -732,6 +723,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
           <caret line="7" column="39" lean-forward="false" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/search.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="32" column="62" lean-forward="false" selection-start-line="32" selection-start-column="62" selection-end-line="32" selection-end-column="62" />
           <folding />
         </state>
       </provider>

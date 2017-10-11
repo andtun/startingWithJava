@@ -30,7 +30,7 @@ public class search {
     }
 
     /**
-     * binary search with all the pretty stuff like prints & input class methods
+     * binary search with all the pretty stuff like prints and input class methods
      * @param list  the list in which we look for the element
      */
     public static void pretty_binary(int[] list) {
