@@ -1,18 +1,18 @@
 /**
- * all methods that search arrays
+ * all methods that Search arrays
  */
-public class search {
+public class Search {
 
     /**
-     * binary search applied to a given array
+     * binary Search applied to a given array
      * @param list  the array you give
      * @param elem  the value you want to find
      * @return  index of the element found or -1
      */
     private static int binary(int[] list, int elem) {
-        sort.quicksort.sort(list);
+        Sort.quicksort.sort(list);
         System.out.print("Отсортированный массив: ");
-        arrayTools.print(list);
+        ArrayTools.print(list);
         int b = 0;
         int e = list.length;
 
@@ -30,11 +30,11 @@ public class search {
     }
 
     /**
-     * binary search with all the pretty stuff like prints and input class methods
+     * binary Search with all the pretty stuff like prints and Input class methods
      * @param list  the list in which we look for the element
      */
     public static void pretty_binary(int[] list) {
-        int elem = input.getInt("Введите элемент, который надо найти");
+        int elem = Input.getInt("Введите элемент, который надо найти");
 
         int res = binary(list, elem);
         if (res == -1)

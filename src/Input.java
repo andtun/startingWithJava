@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
 /**
- * python-like input
+ * python-like Input
  */
-public class input {
+public class Input {
 
     /**
      * universal text if what you entered is wrong
@@ -84,9 +84,9 @@ public class input {
      * @return  a positive int
      */
     public static int getPositiveInt(String alert) {
-        int n = input.getInt(alert);
+        int n = Input.getInt(alert);
         while (n < 1) {
-            n = input.getInt(input.wrongInput);
+            n = Input.getInt(Input.wrongInput);
         }
         return n;
     }

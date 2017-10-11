@@ -1,7 +1,7 @@
 /**
- * the file we run to make the whole thing work
+ * the file we Run to make the whole thing work
  */
-public class run {
+public class Run {
 
     /**
      * the main method (runs the whole thing)
@@ -10,30 +10,30 @@ public class run {
     public static void main(String[] args) {
 
         // get list size
-        int n = input.getPositiveInt("Введите целое число - размер массива.");
+        int n = Input.getPositiveInt("Введите целое число - размер массива.");
         // create a list
         int[] list = new int[n];
         // fill the list
-        arrayTools.fill_manually_or_random(list);
+        ArrayTools.fill_manually_or_random(list);
 
         // get what to do
-        int option = input.getInt("Введите 1 для quicksort, 2 - для поиска, 3 - for bubblesort");
+        int option = Input.getInt("Введите 1 для quicksort, 2 - для поиска, 3 - for bubblesort");
         switch (option) {
 
             // quicksort
             case 1:
-                sort.quicksort.sort(list);
-                arrayTools.print(list);
+                Sort.quicksort.sort(list);
+                ArrayTools.print(list);
                 break;
 
-            // binary search
+            // binary Search
             case 2:
-                search.pretty_binary(list);
+                Search.pretty_binary(list);
                 break;
 
-            // bubble sort
+            // bubble Sort
             case 3:
-                sort.bubblesort.sort(list);
+                Sort.bubblesort.sort(list);
                 break;
 
             // if the option is wrong

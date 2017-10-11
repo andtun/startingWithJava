@@ -1,7 +1,7 @@
 /**
  * all sorting methods
  */
-public class sort {
+public class Sort {
 
     /**
      * quicksort algorithm
@@ -9,7 +9,7 @@ public class sort {
     public static class quicksort {
 
         /**
-         * call quicksort.sort() in the main file to sort an array with the quicksort algo
+         * call quicksort.Sort() in the main file to Sort an array with the quicksort algo
          * @param list  the array which needs to be sorted
          */
         public static void sort(int[] list) {
@@ -32,7 +32,7 @@ public class sort {
                 int b = begin;
                 int e = end;
 
-                // quick sort base - the element we compare others with
+                // quick Sort base - the element we compare others with
                 // may be chosen by random, but this one is considered to be the most efficient
                 int base = b - (b - e) / 2;
 
@@ -47,7 +47,7 @@ public class sort {
 
                     // swap numbers, if the first one is bigger
                     if (b < e) {
-                        arrayTools.int_swap(list, b, e);
+                        ArrayTools.int_swap(list, b, e);
 
                         // start with a new base
                         if (b == base)
@@ -57,21 +57,21 @@ public class sort {
                     }
                 }
 
-                // sort numbers smaller than base
+                // Sort numbers smaller than base
                 sort_step(begin, base, list);
-                // sort numbers bigger than base
+                // Sort numbers bigger than base
                 sort_step(base + 1, end, list);
             }
         }
     }
 
     /**
-     * bubble sort algorithm
+     * bubble Sort algorithm
      */
     public static class bubblesort {
 
         /**
-         * call bubblesort.sort() in the main file to sort an array with the bubble sort algo
+         * call bubblesort.Sort() in the main file to Sort an array with the bubble Sort algo
          * @param list  the list which needs to be sorted
          */
         public static void sort(int[] list) {
@@ -79,10 +79,10 @@ public class sort {
             for(int i = list.length-1 ; i > 0 ; i--){
                 for(int j = 0 ; j < i ; j++){
                 if( list[j] > list[j+1] )
-                    arrayTools.int_swap(list, j, j+1);
+                    ArrayTools.int_swap(list, j, j+1);
                 }
             }
-        arrayTools.print(list);
+        ArrayTools.print(list);
         }
     }
 }

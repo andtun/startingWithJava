@@ -3,7 +3,7 @@ import java.util.concurrent.ThreadLocalRandom;
 /**
  * tools to work with arrays
  */
-public class arrayTools {
+public class ArrayTools {
 
     /**
      * generate a random int
@@ -24,7 +24,7 @@ public class arrayTools {
         /**
          * fill an array with random values
          * @param list  the array we wanna fill
-         * @param range the range of randomness (see arrayTools.random_int())
+         * @param range the range of randomness (see ArrayTools.random_int())
          */
     public static void random(int[] list, int range) {
         for (int i = 0; i < list.length; i++) {
@@ -40,7 +40,7 @@ public class arrayTools {
         System.out.println("Вводите массив из "+ list.length +" чисел");
 
         for (int i = 0; i < list.length; i++)
-            list[i] = input.getInt("Введите "+ i +" элемент массива");
+            list[i] = Input.getInt("Введите "+ i +" элемент массива");
     }
     }
 
@@ -68,12 +68,12 @@ public class arrayTools {
     }
 
     /**
-     * ask whether to fill the array with random numbers or from input
+     * ask whether to fill the array with random numbers or from Input
      * then fill it using the fill class methods
      * @param list  the array to be filled
      */
     public static void fill_manually_or_random(int[] list) {
-        Boolean use_random = input.getBool("Заполнить массив случайными числами");
+        Boolean use_random = Input.getBool("Заполнить массив случайными числами");
         if (use_random) {
             fill.random(list, 1000);
             print(list);
