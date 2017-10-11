@@ -70,8 +70,8 @@ public class input {
 
     /**
      * see getBool, but alerts a string before reading
-     * @param alert
-     * @return
+     * @param alert what to alert
+     * @return  true or false (Bool values)
      */
     public static Boolean getBool(String alert) {
         System.out.println(alert);

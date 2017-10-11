@@ -4,7 +4,8 @@
 public class run {
 
     /**
-     * main body
+     * the main method (runs the whole thing)
+     * @param args  u know the param :)
      */
     public static void main(String[] args) {
 
