@@ -1,27 +1,41 @@
 import java.util.Scanner;
 
-// python-like input
+/**
+ * python-like input
+ */
 public class input {
 
-    // universal text if what you entered is wrong
+    /**
+     * universal text if what you entered is wrong
+     */
     public static String wrongInput = "Фигню ввели. Повторите ввод: ";
 
 
-    // read a String from keyboard
+    /**
+     * get a string from keyboard
+     * @return  String the user entered
+     */
     public static String getStr() {
         Scanner read = new Scanner(System.in);
         return read.nextLine();
     }
 
 
-    // print some text, read a String from keyboard
+    /**
+     * print some text, read a String from keyboard
+     * @param alert what you want to print before reading
+     * @return  String the user entered
+     */
     public static String getStr(String alert) {
         System.out.print(alert);
         return getStr();
     }
 
 
-    // read an Int for keyboard
+    /**
+     * read an Int for keyboard
+     * @return  int the user entered
+     */
     public static int getInt() {
         Scanner read = new Scanner(System.in);
         if (read.hasNextInt()) return read.nextInt();
@@ -29,13 +43,22 @@ public class input {
     }
 
 
-    // print some text, read an Int for keyboard
+    /**
+     * Same as getInt()
+     * @param alert what you want to print before reading
+     * @return  int the user entered
+     */
     public static int getInt(String alert) {
         System.out.println(alert);
         return getInt();
     }
 
-    // get a boolean value: 1 -- for true, 0 -- for false
+    /**
+     * read a boolean value from keyboard
+     * 1 is for true, 0 - for false
+     * no other values accepted
+     * @return  true if the user entered '1', false if the user entered '0'
+     */
     public static Boolean getBool() {
         int choice = getInt("0 for False, 1 for True");
         while ((choice != 0) && (choice != 1)) {
@@ -45,13 +68,21 @@ public class input {
     }
 
 
-    // print some text, get a Bool  value
+    /**
+     * see getBool, but alerts a string before reading
+     * @param alert
+     * @return
+     */
     public static Boolean getBool(String alert) {
         System.out.println(alert);
         return getBool();
     }
 
-    // read an int, check if it's positive
+    /**
+     * read a positive int from keyboard
+     * @param alert alerts a string
+     * @return  a positive int
+     */
     public static int getPositiveInt(String alert) {
         int n = input.getInt(alert);
         while (n < 1) {

@@ -1,6 +1,11 @@
+/**
+ * the file we run to make the whole thing work
+ */
 public class run {
 
-    // main body
+    /**
+     * main body
+     */
     public static void main(String[] args) {
 
         // get list size
