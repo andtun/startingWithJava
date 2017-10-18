@@ -9,6 +9,7 @@ public class Search {
      * @param elem  the value you want to find
      * @return  index of the element found or -1
      */
+    /*
     private static int binary(int[] list, int elem) {
         SortingAlg.sort(list);
         System.out.print("Отсортированный массив: ");
@@ -28,11 +29,13 @@ public class Search {
         }
         return -1;
     }
-
+*/
     /**
      * binary Search with all the pretty stuff like prints and Input class methods
      * @param list  the list in which we look for the element
      */
+
+    /*
     public static void pretty_binary(int[] list) {
         int elem = Input.getInt("Введите элемент, который надо найти");
 
@@ -42,5 +45,5 @@ public class Search {
         else
             System.out.print(String.format("Элемент '%d' найден в отсортированном мотиве с индексом %d", elem, res));
     }
-
+*/
 }

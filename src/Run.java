@@ -7,6 +7,7 @@ public class Run {
      * the main method (runs the whole thing)
      * @param args  u know the param :)
      */
+    /*
     public static void main(String[] args) {
 
         // get list size
@@ -51,4 +52,5 @@ public class Run {
         }
 
     }
+    */
 }
