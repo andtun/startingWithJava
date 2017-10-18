@@ -1,17 +1,34 @@
+/**
+ * All sorting algorithms have sort() method
+ */
+interface SortingAlg {
+    void sort(int[] list);
+}
+
+/**
+ * Timetracker tracks the time of execution of a sorting algorithm
+ */
 class TimeTracker implements SortingAlg{
 
     private SortingAlg alg;
     String name;
     double result;
 
+    /**
+     * init new Timetracker
+     * @param alg   the algorithm to be tested
+     * @param name  the name of the algorithm
+     */
     public TimeTracker(SortingAlg alg, String name) {
         this.alg = alg;
         this.name = name;
     }
 
-    public TimeTracker(SortingAlg alg) {
-    }
-
+    /**
+     * sorting decorator for all .sort() methods
+     * Runs the method and checks its execution time
+     * @param list  the list to be sorted
+     */
     @Override
     public void sort(int[] list) {
         long start = System.nanoTime();
@@ -26,10 +43,22 @@ class TimeTracker implements SortingAlg{
 }
 
 public class RunDat extends TimeTracker{
-    public RunDat(SortingAlg alg) {
-        super(alg);
+
+    /**
+     * init new Timetracker
+     *
+     * @param alg  the algorithm to be tested
+     * @param name the name of the algorithm
+     */
+    public RunDat(SortingAlg alg, String name) {
+        super(alg, name);
     }
 
+    /**
+     * Get the fastest algorithm out of the list given
+     * @param trackers  array of the algorithms (SortingAlg elements)
+     * @return  fastest algorithm (TimeTracker object)
+      */
     static TimeTracker minResult(TimeTracker[] trackers) {
         double min = trackers[0].result;
         TimeTracker bestTracker = trackers[0];
@@ -50,6 +79,7 @@ public class RunDat extends TimeTracker{
         // fill the list
         ArrayTools.fill_manually_or_random(list);
 
+        // list of the algorithms
         TimeTracker[] algs = new TimeTracker[] {
                 new TimeTracker(new Sort.quicksort(), "quicksort"),
                 new TimeTracker(new Sort.bubblesort(), "bubblesort"),

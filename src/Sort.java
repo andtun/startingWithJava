@@ -1,10 +1,6 @@
 import static java.lang.Math.abs;
 
 
-interface SortingAlg {
-    void sort(int[] list);
-}
-
 /**
  * all sorting methods
  */
@@ -25,6 +21,7 @@ public class Sort {
             int begin = 0;
             int end = list.length - 1;
             sort_step(begin, end, list);
+            ArrayTools.print(list);
         }
 
         /**
