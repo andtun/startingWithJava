@@ -1,3 +1,10 @@
+import static java.lang.Math.abs;
+
+
+interface SortingAlg {
+    void sort(int[] list);
+}
+
 /**
  * all sorting methods
  */
@@ -6,13 +13,15 @@ public class Sort {
     /**
      * quicksort algorithm
      */
-    public static class quicksort {
+    public static class quicksort implements SortingAlg {
 
         /**
          * call quicksort.Sort() in the main file to Sort an array with the quicksort algo
          * @param list  the array which needs to be sorted
          */
-        public static void sort(int[] list) {
+
+        @Override
+        public void sort(int[] list) {
             int begin = 0;
             int end = list.length - 1;
             sort_step(begin, end, list);
@@ -68,13 +77,14 @@ public class Sort {
     /**
      * bubble Sort algorithm
      */
-    public static class bubblesort {
+    public static class bubblesort implements SortingAlg {
 
         /**
          * call bubblesort.Sort() in the main file to Sort an array with the bubble Sort algo
          * @param list  the list which needs to be sorted
          */
-        public static void sort(int[] list) {
+        @Override
+        public void sort(int[] list) {
 
             for(int i = list.length-1 ; i > 0 ; i--){
                 for(int j = 0 ; j < i ; j++){
@@ -84,5 +94,99 @@ public class Sort {
             }
         ArrayTools.print(list);
         }
+    }
+
+
+    /**
+     * Stupid (or "monkey") sort - keep randomly mixing the array until it's sorted
+     */
+    public static class StupidSort implements SortingAlg {
+
+        /**
+         * Randomly shuffle array elements
+         * @param list  the array to be shuffled
+         */
+        private static void mix (int[] list) {
+            for (int i = 0; i < list.length; i++) {
+                ArrayTools.int_swap(list, i, abs(ArrayTools.random_int(list.length - 1)));
+            }
+        }
+
+        /**
+         * Check if the array is sorted (straight)
+         * @param list  the array to be checked
+         * @return  true if sorted, else - false
+         */
+        private static boolean sorted(int[] list) {
+            for (int i = 1; i < list.length; i++) {
+                if (list[i-1] > list[i])
+                        return false;
+            }
+            return true;
+        }
+
+        /**
+         * Stupidly sort an array
+         * @param list  the array to be sorted
+         */
+
+        @Override
+        public void sort(int[] list) {
+            while (!sorted(list))
+                mix(list);
+            ArrayTools.print(list);
+        }
+
+    }
+
+
+    // TODO: comment the heapsort, test it
+
+    /**
+     * Convert the array to a heap, sort the heap
+     */
+    public static class PyramidSort implements SortingAlg {
+
+        /**
+         * Sort an array
+         * @param list  the array to be sorted
+         */
+        @Override
+        public void sort(int[] list) {
+
+            for (int i = list.length / 2 - 1; i >= 0; i--)
+
+                // convert the array to a heap
+                shiftDown(list, i, list.length);
+
+            for (int i = list.length - 1; i > 0; i--) {
+                ArrayTools.int_swap(list, 0, i);
+                shiftDown(list, 0, i);
+            }
+
+            ArrayTools.print(list);
+        }
+
+        private static void shiftDown(int[] a, int i, int n) {
+            int child;
+            int tmp;
+
+            for (tmp = a[i]; leftChild(i) < n; i = child) {
+                child = leftChild(i);
+                if (child != n - 1 && (a[child] < a[child + 1]))
+                    child++;
+                if (tmp < a[child])
+                    a[i] = a[child];
+                else
+                    break;
+            }
+            a[i] = tmp;
+        }
+
+        private static int leftChild(int i) {
+            return 2 * i + 1;
+        }
+
+
     }
 }

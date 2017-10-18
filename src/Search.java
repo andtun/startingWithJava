@@ -10,7 +10,7 @@ public class Search {
      * @return  index of the element found or -1
      */
     private static int binary(int[] list, int elem) {
-        Sort.quicksort.sort(list);
+        SortingAlg.sort(list);
         System.out.print("Отсортированный массив: ");
         ArrayTools.print(list);
         int b = 0;
