@@ -1,6 +1,6 @@
 class TimeTracker implements SortingAlg{
 
-    SortingAlg alg;
+    private SortingAlg alg;
     String name;
     double result;
 
@@ -17,7 +17,7 @@ class TimeTracker implements SortingAlg{
         long start = System.nanoTime();
         alg.sort(list);
         long end = System.nanoTime();
-        result = (end - start)/3600000000.0;
+        result = (end - start)/1000000000.0;
 
         System.out.print("Работа алгоритма " + name + " завершена за ");
         System.out.print(result);
@@ -67,20 +67,3 @@ public class RunDat extends TimeTracker{
 
     }
 }
-
-
-/*
-
-public class TimeTracker {
-
-    public static void main (String[] args) {
-        List<Integer> l = new ArrayList<Integer>();\\
-        long start = System.nanoTime();
-        for (int i = -1000000; i < 1000000; i++) {
-            l.add(i);
-        }
-        long end = System.nanoTime();
-        System.out.println((end - start)/3600000000.0);
-    }
-}
-*/
