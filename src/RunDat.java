@@ -31,8 +31,9 @@ class TimeTracker implements SortingAlg{
      */
     @Override
     public void sort(int[] list) {
+        int[] listToSort = list.clone();
         long start = System.nanoTime();
-        alg.sort(list);
+        alg.sort(listToSort);
         long end = System.nanoTime();
         result = (end - start)/1000000000.0;
 
