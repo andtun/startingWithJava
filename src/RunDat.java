@@ -97,4 +97,5 @@ public class RunDat extends TimeTracker{
         System.out.print("Быстрее всех оказался алгоритм " + bestAlg.name);
 
     }
+
 }
